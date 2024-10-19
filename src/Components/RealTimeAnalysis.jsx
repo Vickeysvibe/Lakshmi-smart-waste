@@ -62,7 +62,7 @@ const RealTimeAnalysis = ({ apiKey, topLocations }) => {
               </thead>
               <tbody>
                 {topLocations.map((location, index) => (
-                  <tr key={index} className="hover:bg-gray-100">
+                  <tr key={index} className="hover:bg-gray-100 h-24">
                     <td className="border px-4 py-2">{location.Location}</td>
                     <td className="border px-4 py-2 text-center">
                       {location["Weight (kg)"]}

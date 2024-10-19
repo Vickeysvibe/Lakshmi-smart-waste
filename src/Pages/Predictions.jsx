@@ -51,7 +51,7 @@ const Predictions = ({ densityGraph }) => {
                   id="density-graph"
                   src={`data:image/png;base64,${updatedGraph}`}
                   alt="Density Graph"
-                  className="w-full h-auto rounded-lg shadow-lg"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
             </div>
@@ -67,7 +67,7 @@ const Predictions = ({ densityGraph }) => {
                       {locations.map((location, index) => (
                         <tr
                           key={index}
-                          className={`hover:bg-gray-100 cursor-pointer ${
+                          className={`hover:bg-gray-100 cursor-pointer h-16 ${
                             activeLocation === location ? "bg-gray-200" : ""
                           }`}
                           onClick={() => updateGraph(location)}
@@ -82,12 +82,12 @@ const Predictions = ({ densityGraph }) => {
 
               {/* Overall Garbage Info */}
               <div className="bg-white shadow-md rounded-3xl p-6">
-                <h5 className="text-3xl font-semibold mb-4">Overall Garbage</h5>
+                <h5 className="text-3xl font-bold mb-4">Overall Garbage</h5>
                 <img
                   id="main-graph"
                   src={`data:image/png;base64,${mainGraph}`}
                   alt="Main Graph"
-                  className="w-full h-auto rounded-lg shadow-lg"
+                  className="w-full h-auto rounded-lg"
                 />
               </div>
             </div>
