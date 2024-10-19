@@ -6,8 +6,6 @@ import "./App.css";
 import Schedules from "./Pages/Schedules";
 
 const App = () => {
-  const vehicleName = "Vehicle 1";
-  const checkpoints = ["White Town Puducherry", "Chetty Street Puducherry"];
   return (
     <Routes>
       <Route path="/" element={<Homepage />} />

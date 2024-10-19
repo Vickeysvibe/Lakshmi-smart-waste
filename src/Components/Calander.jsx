@@ -50,6 +50,7 @@ const Calendar = ({ events }) => {
             ${event ? "bg-green-700 text-white" : "bg-white"}
             ${isSelected ? "border-2 border-blue-500" : "border-gray-300"}
             hover:bg-gray-100 transition-all duration-200 cursor-pointer`}
+          // eslint-disable-next-line no-loop-func
           onClick={() => setSelectedDate(day)}
           onMouseEnter={() => setHoveredEvent(event)}
           onMouseLeave={() => setHoveredEvent(null)}

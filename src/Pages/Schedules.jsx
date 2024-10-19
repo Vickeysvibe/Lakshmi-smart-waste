@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Calendar from "../Components/Calander";
 import Layout from "../layout";
 import EventTable from "../Components/EventTable";
@@ -29,7 +28,6 @@ const Schedules = () => {
     },
   ];
 
-  const [selectedDate, setSelectedDate] = useState();
   return (
     <Layout>
       {!events ? (

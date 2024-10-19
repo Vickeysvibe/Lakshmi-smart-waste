@@ -1,6 +1,6 @@
 // EventTable.jsx
 import React from "react";
-import { format, compareAsc, isEqual } from "date-fns";
+import { format, compareAsc } from "date-fns";
 
 // Helper function to remove time and only compare dates
 const stripTime = (date) => new Date(date.setHours(0, 0, 0, 0));
