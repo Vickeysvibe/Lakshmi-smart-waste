@@ -3,12 +3,11 @@ import { Link, useLocation } from "react-router-dom";
 
 const SideBar = () => {
   const { pathname: path } = useLocation();
-  const done = true;
   useEffect(() => {
     console.log(path);
   });
   return (
-    <div className=" h-screen flex flex-col top-0 left-0 w-1/6 bg-[#022213] h-full border-r">
+    <div className=" flex flex-col top-0 left-0 w-1/6 bg-[#022213] h-screen border-r">
       <div className="flex items-center justify-center h-14 text-[#517003] p-20 pb-40 font-bold text-[40px]">
         <div>Lakshmi</div>
       </div>

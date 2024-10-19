@@ -7,7 +7,7 @@ import {
 } from "@react-google-maps/api";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSyncAlt, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 
 // Define the map container style
 const mapContainerStyle = {
