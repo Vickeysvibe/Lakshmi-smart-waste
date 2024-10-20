@@ -86,9 +86,9 @@ const Homepage = () => {
                   />
                 </div>
                 <div className="ml-10">
-                  <p className="text-gray-500 text-2xl">{"Overflow"}</p>
+                  <p className="text-gray-500 text-2xl">{"Overfill"}</p>
                   <h4 className="text-[30px] font-semibold">
-                    {blocs.overflow}
+                    {blocs.overfill}
                   </h4>
                 </div>
               </div>

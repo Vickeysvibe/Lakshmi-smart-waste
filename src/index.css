@@ -5,6 +5,7 @@
 
 body {
   font-family: "Nunito", sans-serif;
+  background-color: #022213;
 }
 .trans {
   transition: all 0.2s ease-in-out;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Queries = () => {
+const Queries = ({ queries }) => {
   const [eventDetails, setEventDetails] = useState(null);
   const showDetails = (id, description, latitude, longitude, imageUrl) => {
     setEventDetails({
@@ -11,19 +11,7 @@ const Queries = () => {
       image_url: imageUrl,
     });
   };
-  const queries = [
-    // Example events array
-    {
-      _id: "1",
-      name: "Event 1",
-      status: "Pending",
-      description: "Description for Event 1",
-      latitude: "34.0522",
-      longitude: "-118.2437",
-      image_url: "https://via.placeholder.com/150",
-    },
-    // Add more event objects as needed
-  ];
+
   return (
     <div className="grid grid-cols-12 gap-4 mb-20">
       {/* Queries List */}

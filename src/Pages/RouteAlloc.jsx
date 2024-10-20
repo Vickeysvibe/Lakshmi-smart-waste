@@ -33,7 +33,7 @@ const RouteAlloc = ({ densityGraph }) => {
         <Loading />
       ) : (
         <div className=" flex flex-col h-full mx-auto p-4 w-[92%]">
-          <h1 className=" text-[40px] font-bold py-10">Predictions</h1>
+          <h1 className=" text-[40px] font-bold py-10">Route Allocations</h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
             {/* Left Column with Predicted Garbage and Graphs */}
 

@@ -4,6 +4,7 @@ import Predictions from "./Pages/Predictions";
 import RouteAlloc from "./Pages/RouteAlloc";
 import "./App.css";
 import Schedules from "./Pages/Schedules";
+import Announcements from "./Pages/Announcements";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Route path="/predictions" element={<Predictions />} />
       <Route path="/schedules" element={<Schedules />} />
       <Route path="/routes" element={<RouteAlloc />} />
+      <Route path="/announcements" element={<Announcements />} />
     </Routes>
   );
 };

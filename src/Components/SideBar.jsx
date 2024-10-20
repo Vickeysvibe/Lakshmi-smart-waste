@@ -7,7 +7,7 @@ const SideBar = () => {
     console.log(path);
   });
   return (
-    <div className=" flex flex-col top-0 left-0 w-1/6 bg-[#022213] h-screen border-r">
+    <div className=" flex flex-col top-0 left-0 w-1/6 bg-[#022213] h-screen border-">
       <div className="flex items-center justify-center h-14 text-[#517003] p-20 pb-40 font-bold text-[40px]">
         <div>Lakshmi</div>
       </div>
@@ -125,6 +125,33 @@ const SideBar = () => {
               </span>
               <span className="ml-10 text-2xl tracking-wide truncate">
                 Routes
+              </span>
+            </Link>
+          </li>
+          <li className=" p-6">
+            <Link
+              to="/announcements"
+              className={`trans p-10 rounded-2xl relative flex flex-row items-center h-11 focus:outline-noneborder-l-4 border-transparent hover:border-[#626F47] ${
+                path.includes("announcements")
+                  ? "bg-[#517003] text-gray-50 hover:bg-[#517003] hover:text-white"
+                  : " hover:bg-gray-50 text-gray-400 hover:text-gray-800 "
+              } pr-6`}
+            >
+              <span className="inline-flex justify-center items-center ml-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M12 8H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h3l5 4V4zm3 7.6L13 14H4v-4h9l2-1.6zm6.5-3.6c0 1.71-.96 3.26-2.5 4V8c1.53.75 2.5 2.3 2.5 4"
+                  />
+                </svg>
+              </span>
+              <span className="ml-10 text-2xl tracking-wide truncate">
+                Announcements
               </span>
             </Link>
           </li>

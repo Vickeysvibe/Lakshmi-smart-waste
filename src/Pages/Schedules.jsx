@@ -3,30 +3,22 @@ import Layout from "../layout";
 import EventTable from "../Components/EventTable";
 import Loading from "../Components/Loading";
 import Queries from "../Components/Queries";
+import { useEffect, useState } from "react";
 const Schedules = () => {
-  const events = [
-    {
-      date: "2024-10-19",
-      type: "Hackathon",
-      address: "https://maps.google.com/?q=Tech+Park,+Block+B",
-      vehicleNeeded: 3,
-      personnelNeeded: 10,
-    },
-    {
-      date: "2024-10-21",
-      type: "Team Meeting",
-      address: "https://maps.google.com/?q=Room+101",
-      vehicleNeeded: 2,
-      personnelNeeded: 5,
-    },
-    {
-      date: "2024-10-25",
-      type: "Project Deadline",
-      address: "https://maps.google.com/?q=Main+Office",
-      vehicleNeeded: 1,
-      personnelNeeded: 0,
-    },
-  ];
+  const [events, setEvents] = useState(null);
+  const [queries, setQueries] = useState([]);
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_BACKEND}/schedule/events`)
+      .then((res) => res.json())
+      .then((data) => {
+        setEvents(data);
+      });
+    fetch(`${process.env.REACT_APP_BACKEND}/schedule/queries`)
+      .then((res) => res.json())
+      .then((data) => {
+        setQueries(data);
+      });
+  }, []);
 
   return (
     <Layout>
@@ -39,7 +31,7 @@ const Schedules = () => {
             <Calendar events={events} />
             <EventTable events={events} />
           </div>
-          <Queries />
+          <Queries queries={queries} />
         </div>
       )}
     </Layout>
