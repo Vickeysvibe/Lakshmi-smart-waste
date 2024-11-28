@@ -11,16 +11,9 @@ const Announcements = () => {
   // Fetch announcements from API
   const fetchAnnouncements = async () => {
     try {
-      const response = {
-        data: [
-          {
-            heading: "Cleaning of the Drainage near Kanniyakovil ",
-            description:
-              "the dreainage near kanniyakovil will we on for cleaning starting 2021-01-01 so there will be no water supply till 2024 so bathing, drinking and washing your ass is not allowed during those days, thank you",
-            date: "2021-01-01",
-          },
-        ],
-      };
+      const response = await axios.get(
+        `${process.env.REACT_APP_BACKEND}/appCrud/announcements`
+      );
       setAnnouncements(response.data);
     } catch (error) {
       console.error("Error fetching announcements:", error);
@@ -30,7 +23,7 @@ const Announcements = () => {
   // Trigger the fetch function on component mount
   useEffect(() => {
     fetchAnnouncements();
-  }, []);
+  }, [showModal]);
 
   // Function to handle posting a new announcement
   const handlePostAnnouncement = async (announcement) => {
@@ -87,6 +80,7 @@ const Announcements = () => {
           <AnnouncementModal
             onClose={() => setShowModal(false)}
             onSubmit={handlePostAnnouncement}
+            setShowModal={() => setShowModal(false)}
           />
         )}
       </div>

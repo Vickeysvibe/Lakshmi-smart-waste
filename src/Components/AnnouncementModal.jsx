@@ -1,15 +1,21 @@
 // AnnouncementModal.jsx
+import axios from "axios";
 import React, { useState } from "react";
 
-const AnnouncementModal = ({ onClose, onSubmit }) => {
+const AnnouncementModal = ({ onClose, onSubmit, setShowModal }) => {
   const [heading, setHeading] = useState("");
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const announcement = { heading, description, date };
-    onSubmit(announcement);
+    await axios.post(
+      `${process.env.REACT_APP_BACKEND}/appCrud/announcements`,
+      announcement
+    );
+    onSubmit();
+    setShowModal(false);
   };
 
   return (

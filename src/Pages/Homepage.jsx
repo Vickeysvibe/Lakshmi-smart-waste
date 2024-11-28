@@ -15,6 +15,8 @@ const Homepage = () => {
       console.log(response.data);
       setBlocs(response.data.blocs);
       setTopLocations(response.data.locations);
+      console.log(blocs);
+      console.log(topLocations);
     });
   }, []);
 

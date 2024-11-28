@@ -69,7 +69,7 @@ const Queries = ({ queries }) => {
               {eventDetails ? (
                 <div className="space-y-4">
                   <h5 className="text-xl font-semibold">
-                    Complaint ID: {eventDetails._id}
+                    Complaint ID: {eventDetails.id}
                   </h5>
                   <img
                     src={eventDetails.image_url}
