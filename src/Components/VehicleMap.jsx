@@ -41,7 +41,7 @@ const RouteAlloc = ({ vehicleName, checkpoints }) => {
     const fetchMapData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8888/routes/api/get_vehicle_map",
+          "http://localhost:8080/routes/api/get_vehicle_map",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
