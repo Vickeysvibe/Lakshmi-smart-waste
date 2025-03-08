@@ -1,8 +1,8 @@
-# Laxmi - Smart Waste Management Admin Panel
+# Lakshmi - Smart Waste Management Admin Panel
 
 ## Overview
 
-Laxmi is an intelligent waste management application utilizing IoT devices and machine learning algorithms to optimize garbage collection. The admin panel is a React-based dashboard that enables city officials to monitor dustbin statuses, predict waste accumulation, and optimize collection routes efficiently.
+Lakshmi is an intelligent waste management application utilizing IoT devices and machine learning algorithms to optimize garbage collection. The admin panel is a React-based dashboard that enables city officials to monitor dustbin statuses, predict waste accumulation, and optimize collection routes efficiently.
 
 ## Features
 
@@ -76,11 +76,3 @@ npm start
 2. Create a new branch (`feature-branch`)
 3. Commit changes and push to your branch
 4. Open a pull request
-
-## License
-
-This project is licensed under the MIT License.
-
----
-
-Feel free to update the screenshots and demo links as needed!
