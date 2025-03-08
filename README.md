@@ -49,10 +49,10 @@ Lakshmi is an intelligent waste management application utilizing IoT devices and
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-repo-name.git
+git clone https://github.com/Vickeysvibe/Lakshmi-smart-waste
 
 # Navigate to the admin panel folder
-cd admin-panel
+cd Lakshmi-smart-waste
 
 # Install dependencies
 npm install
