@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Laxmi - Smart Waste Management Admin Panel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+Laxmi is an intelligent waste management application utilizing IoT devices and machine learning algorithms to optimize garbage collection. The admin panel is a React-based dashboard that enables city officials to monitor dustbin statuses, predict waste accumulation, and optimize collection routes efficiently.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### 📊 Live Dustbin Monitoring
+- Displays real-time waste levels of dustbins across the city.
+- Data is stored and continuously updated in the database.
 
-### `npm start`
+### 🔮 Waste Prediction
+- Predicts which dustbins will be filled within the next 24 hours or the next week.
+- Forecasts the exact dates when dustbins will reach full capacity.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🚛 Optimal Route Planning
+- Generates the most efficient collection route for garbage vehicles based on:
+  - Vehicle capacity (e.g., 500 kg)
+  - Current waste levels in dustbins
+  - Destination (landfill/dumpster)
+- Provides a visual route map for easy navigation.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 📢 Announcements & Notifications
+- Admins can send dynamic notifications and announcements to users.
+- Helps inform users about waste collection schedules and any urgent updates.
 
-### `npm test`
+### 🛠 Complaint Management
+- Users can report overflowing dustbins via the mobile app.
+- Complaints are received and managed from the admin panel.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📅 Event Pre-Intimation
+- Users can notify officials in advance about events that may increase waste generation.
+- Helps in better resource planning and allocation.
 
-### `npm run build`
+## Tech Stack
+- **Frontend**: React.js
+- **State Management**: Redux (if used)
+- **Styling**: Tailwind CSS / Material-UI / Custom CSS
+- **Maps & Routing**: Google Maps API / OpenStreetMap API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation & Setup
+```bash
+# Clone the repository
+git clone https://github.com/your-repo-name.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Navigate to the admin panel folder
+cd admin-panel
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Install dependencies
+npm install
 
-### `npm run eject`
+# Start the development server
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Screenshots
+![Dashboard](path-to-screenshot/dashboard.png)
+![Live Monitoring](path-to-screenshot/live-monitoring.png)
+![Route Optimization](path-to-screenshot/route-optimization.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Demo Video
+[![Watch the Demo](path-to-video/demo-thumbnail.png)](path-to-video/demo.mp4)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contribution
+1. Fork the repository
+2. Create a new branch (`feature-branch`)
+3. Commit changes and push to your branch
+4. Open a pull request
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
+This project is licensed under the MIT License.
 
-## Learn More
+---
+Feel free to update the screenshots and demo links as needed!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
