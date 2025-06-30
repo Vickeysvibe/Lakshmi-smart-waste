@@ -21,11 +21,10 @@ const defaultCenter = {
   lng: 79.834,
 };
 
-const RealTimeAnalysis = ({ apiKey, topLocations }) => {
+const RealTimeAnalysis = ({ refresh, apiKey, topLocations }) => {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: apiKey, // Pass the API key as a prop
   });
-  const [refresh, setRefresh] = useState(false);
 
   const [selectedLocation, setSelectedLocation] = useState(null);
 
@@ -37,10 +36,7 @@ const RealTimeAnalysis = ({ apiKey, topLocations }) => {
         <div className="flex justify-between items-center mb-2">
           <h4 className="text-[30px] font-bold">Real-time Analysis</h4>
           <div className="space-x-8">
-            <button
-              className="btn-primary"
-              onClick={() => setRefresh(!refresh)}
-            >
+            <button className="btn-primary" onClick={refresh}>
               <FontAwesomeIcon icon={faSyncAlt} size="2x" />
             </button>
           </div>
@@ -51,10 +47,10 @@ const RealTimeAnalysis = ({ apiKey, topLocations }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           {/* Table of Locations */}
-          <div className="overflow-auto">
+          <div className="overflow-auto max-h-[400px]">
             <table className="table-auto w-full text-[20px] text-center border-collapse border rounded-xl border-gray-300">
               <thead>
-                <tr>
+                <tr className=" sticky top-0 bg-slate-100 ">
                   <th className="border px-4 py-2">Location</th>
                   <th className="border px-4 py-2">Weight (kg)</th>
                   <th className="border px-4 py-2">Fill Level (%)</th>
@@ -65,10 +61,13 @@ const RealTimeAnalysis = ({ apiKey, topLocations }) => {
                   <tr key={index} className="hover:bg-gray-100 h-24">
                     <td className="border px-4 py-2">{location.Location}</td>
                     <td className="border px-4 py-2 text-center">
-                      {location["Weight (kg)"]}
+                      {Math.round(
+                        location["Capacity"] *
+                          (location["Average_Fill_Level"] / 100)
+                      )}
                     </td>
                     <td className="border px-4 py-2 text-center">
-                      {location["Fill Level (%)"]}%
+                      {location["Average_Fill_Level"]}%
                     </td>
                   </tr>
                 ))}

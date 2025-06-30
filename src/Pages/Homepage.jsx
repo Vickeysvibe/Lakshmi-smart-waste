@@ -8,6 +8,7 @@ import Loading from "../Components/Loading";
 const Homepage = () => {
   const [topLocations, setTopLocations] = useState([]);
   const [blocs, setBlocs] = useState({});
+  const [refresh, setRefresh] = useState(false);
   // Example data
   useEffect(() => {
     console.log(process.env.REACT_APP_BACKEND);
@@ -15,10 +16,12 @@ const Homepage = () => {
       console.log(response.data);
       setBlocs(response.data.blocs);
       setTopLocations(response.data.locations);
-      console.log(blocs);
-      console.log(topLocations);
     });
-  }, []);
+  }, [refresh]);
+
+  const handleRefresh = () => {
+    setRefresh((p) => !p);
+  };
 
   const apiKey = "AIzaSyAZUGoqEFEKNUM30vpCm4Qs1pZkeacFVsA"; // Replace with your API key
   return (
@@ -171,7 +174,11 @@ const Homepage = () => {
 
           {/* real time analysis components */}
 
-          <RealTimeAnalysis apiKey={apiKey} topLocations={topLocations} />
+          <RealTimeAnalysis
+            refresh={handleRefresh}
+            apiKey={apiKey}
+            topLocations={topLocations}
+          />
         </div>
       )}
     </Layout>
